@@ -10,8 +10,8 @@ public interface AuthTokenRepository extends JpaRepository<AuthToken, String> {
 
 
     List<AuthToken> findByUser(User user);
-    public void deleteToken(AuthToken token);
-    public void update(AuthToken token);
-    boolean isTokenExpired(AuthToken token);
+//    public void deleteToken(AuthToken token);
+//    public void update(AuthToken token);
+//    boolean isTokenExpired(AuthToken token);
 
 }

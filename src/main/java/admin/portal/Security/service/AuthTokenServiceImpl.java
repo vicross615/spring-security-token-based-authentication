@@ -26,13 +26,13 @@ public class AuthTokenServiceImpl implements AuthTokenService {
 
     @Override
     public void deleteToken(AuthToken token) {
-        this.authTokenRepository.deleteToken(token);
+        this.authTokenRepository.delete(token);
     }
 
     @Override
     public void update(AuthToken token) {
         token.setLastAccessTime(LocalDateTime.now());
-        this.authTokenRepository.update(token);
+        this.authTokenRepository.save(token);
     }
 
     public AuthTokenRepository getAuthTokenRepository() {
